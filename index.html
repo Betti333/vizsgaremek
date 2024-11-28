@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TörzshelyFittness</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+          <img src="img/logo.png" width="130px" alt="logo">
+            <ul class="nav_items">
+                <li class="nav_item">
+                    <a href="index.html" class="nav_link">Főoldal</a>
+                    <a href="#" class="nav_link">Edzések</a>
+                    <a href="orarend.html" class="nav_link">Órarend</a>
+                    <a href="elerhetoseg.html" class="nav_link">Elérhetőség</a>
+                </li>
+            </ul>
+    
+            <button class="button" id="form-open">Bejelentkezés</button>
+        </nav>
+    </header>
+        <section class="home">
+            <div class="form_container">
+                <i class ="uil uil-times form_close"></i>
+                <div class="form login_form">
+                    <form action="#">
+                        <h2>Bejelentkezés</h2>
+    
+                        <div class="input_box">
+                            <input type="email" placeholder="írd be az email címed" required>
+                            <i class="uil uil-envelope-alt email"></i>
+                        </div>
+                        <div class="input_box">
+                            <input type="password" placeholder="írd be a jelszavad" required>
+                            <i class="uil uil-lock password"></i>
+                            <i class="uil uil-eye-slash pw_hide"></i>
+                        </div>
+    
+                        <div class="option_field">
+                            <span>
+                                <input type="checkbox" id="check" />
+                                <label for="check">Emlékezz rám</label>
+                            </span>
+                            <a href="#" class="forgot_pw">Elfelejtetted a jelszavad?</a>
+                        </div>
+    
+    
+                        <button class="button">Bejelentkezés</button>
+    
+                        <div class="login_signup">
+                            Nincs még fiókod? <a href="#" id="signup">Regisztráció</a>
+                        </div>
+                    </form>
+                </div>
+    
+                <!--regisztráció form-->
+                <div class="form signup_form">
+                    <form action="#">
+                        <h2>Regisztráció</h2>
+                        <div class="input_box">
+                            <input type="name" placeholder="írd be a neved" required>
+                            <i class="uil uil-users-alt users"></i>
+                        </div>
+                        <div class="input_box">
+                            <input type="email" placeholder="írd be az email címed" required>
+                            <i class="uil uil-envelope-alt email"></i>
+                        </div>
+                        <div class="input_box">
+                            <input type="password" placeholder="Készíts jelszót" required>
+                            <i class="uil uil-lock password"></i>
+                            <i class="uil uil-eye-slash pw_hide"></i>
+                        </div>
+                        <div class="input_box">
+                            <input type="password" placeholder="Ismételd meg a jelszót" required>
+                            <i class="uil uil-lock password"></i>
+                            <i class="uil uil-eye-slash pw_hide"></i>
+                        </div>
+    
+    
+    
+                        <button class="button">Regisztráció</button>
+    
+                        <div class="login_signup">
+                            Van már fiókod? <a href="#" id="login">Bejelentkezés</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section> 
+        <div id="slider">
+          <div id="intro">
+            <h1>Ne csak álmodozz róla,<br><span> TEGYÉL IS ÉRTE!</span></h1> 
+            <h4>Formáld át az életed, kezdd az alakodnál!</h4>
+            <br>
+            <a class="button_pink" href="orarend.html">megnézem az órarendet</a>
+          </div>
+        </div>
+        <div class="center-box">
+          <h2>Edzések</h2>
+          <div class="gym1">
+            <h2 class="overlay-text">trx</h2>
+              <button class="description_button" id="1">részletek</button>
+          </div>
+          <div class="gym2">
+            <h2 class="overlay-text">köredzés</h2>
+              <button class="description_button" id="2">részletek</button>
+          </div>
+          <div class="gym3">
+            <h2 class="overlay-text">kettlebell</h2>
+              <button class="description_button" id="3">részletek</button>
+          </div>
+          
+            <div class="text-container" id="text-container">
+               <!-- A kattintás után megjelenő leírások ide kerülnek -->
+            </div>	
+       
+        </div>
+        <section id="workout-list">
+          <h2>Aktuális órarend</h2>
+          <div id="workouts">
+              <table class="f1-table">
+                <thead>
+                    <tr>
+                        <th>Azonosító</th>
+                        <th>Edzés neve</th>
+                        <th>Nap</th>
+                        <th>Idő</th>
+                        <th>Ár</th>
+                        <th>Szabad hely</th>
+                        <th>Jelentkezés</th>
+                    </tr>
+                </thead>
+                <tbody id = "edzesek">
+                <!-- Ide kerülnek az edzések adatai -->
+                </tbody>
+            </table>
+          </div>
+      </section>
+      <section>
+        <div class="mit">
+          <div class="mit-text">
+            <h1><span>Mit ad a mozgás?</span></h1>
+            <ul>
+            <li>
+              erő
+            </li>
+            <li>
+              kitartás
+            </li>
+            <li>
+              önbizalom
+            </li>
+            <li>
+              egészség
+            </li>
+            <li>
+              folyamatos fejlődés
+            </li>
+            <li>
+              szuper közösség
+            </li>
+            </ul>
+          </div>
+          </div>
+    
+      </section>
+
+      <main>
+        <h2>Árak</h2>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Napi jegy</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><small class="text-muted fw-light">2200.-Ft/edzés</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Bármelyik edzéstípus</li>
+                  <li>60 perces edzés</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Bérlet / 10 alkalom</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><small class="text-muted fw-light">20000.-Ft/bérlet</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Bármelyik edzéstípusra</li>
+                  <li>30 napig érvényes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Személyi edzés</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><small class="text-muted fw-light">4000.-Ft/alkalom</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Személyre szabott edzésterv</li>
+                  <li>Egyéni időpont</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+      <footer>
+        <div class="row">
+          <div class="col-sm">
+          <h4><span>Elérhetőség</span></h4>
+          <p>8000 Székesfehérvár, Hadiárva u. 2.</p>
+          <p>info@torzshelyfittness.hu</p>
+          </div>
+          <div class="col-sm">
+          <h4><span>Bejelentkezés</span></h4>
+          <p>+36 30 123 4567</p>
+          
+          </p>
+          </div>
+          <div class="col-sm">
+          <h4><span>Edződ: Szín Zsu</span></h4>
+          <img src="./img/szinzsu.jpg">
+          </p>
+          </div>
+        </div>
+
+       
+
+
+
+
+
+        <div class="container">
+          <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Főoldal</a></li>
+            <li class="nav-item"><a href="orarend.html" class="nav-link px-2 text-muted">Órarend</a></li>
+            <li class="nav-item"><a href="elerhetoseg.html" class="nav-link px-2 text-muted">Elérhetőség</a></li>
+          </ul>
+          <p class="text-center text-muted">&copy; 2024 Törzshelyfittness</p>
+          </footer>
+        </div>
+        
+        </footer>
+        
+
+
+
+
+        <script src="script.js"></script>
+        <script src="index.js"></script>
+        <script src="edzes_reszletek.js"></script>
+</body>
+</html>

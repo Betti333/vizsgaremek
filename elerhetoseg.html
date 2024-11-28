@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Elérhetőség</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+          <img src="img/logo.png" width="130px" alt="logo">
+            <ul class="nav_items">
+                <li class="nav_item">
+                    <a href="index" class="nav_link">Főoldal</a>
+                    <a href="#" class="nav_link">Edzések</a>
+                    <a href="orarend.html" class="nav_link">Órarend</a>
+                    <a href="elerhetoseg.html" class="nav_link">Elérhetőség</a>
+                </li>
+            </ul>
+    
+            <button class="button" id="form-open">Bejelentkezés</button>
+        </nav>
+    </header>
+    <div id="contact">
+        <div id="urlap">
+            <form>
+                <h1>Kérdésed van?Írj nekem!</h1>
+                <label for="fname">Név:</label>
+                <br>
+                <input type="text" id="fname" name="firstname">
+                <br>
+                <label for="lname">Email cím:</label>
+                <br>
+                <input type="text" id="lname" name="lastname">
+                <br>
+                <label for="phone">Telefonszám:</label><br>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br><br>
+                
+                <label for="subject">Üzenet:</label>
+                <br>
+                <textarea id="subject" name="subject" style="height:200px"></textarea>
+                <br> <br>
+                
+                <input type="submit" value="Küldés">
+                
+            </form>
+        </div>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2711.225499940515!2d18.4313581!3d47.192598700000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4769f7bdf5c26c6f%3A0xb9eef92099acbd60!2zU3rDqWtlc2ZlaMOpcnbDoXIsIEhhZGnDoXJ2YSB1LiAyLCA4MDAw!5e0!3m2!1shu!2shu!4v1701611149469!5m2!1shu!2shu" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</body>
+<footer>
+  <div class="row">
+    <div class="col-sm">
+      <h4><span>Elérhetőség</span></h4>
+      <p>8000 Székesfehérvár, Hadiárva u. 2.</p>
+      <p>info@torzshelyfittness.hu</p>
+    </div>
+    <div class="col-sm">
+      <h4><span>Bejelentkezés</span></h4>
+      <p>+36 30 123 4567</p>
+      <p><a href="https://torzshelyfitness.booked4.us/public/" target="_blank">torzshelyfitness.booked4.us/public</a>
+</p>
+      </p>
+    </div>
+    <div class="col-sm">
+      <h4><span>Edződ: Szín Zsu</span></h4>
+      <img src="./img/szinzsu.jpg">
+      </p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
